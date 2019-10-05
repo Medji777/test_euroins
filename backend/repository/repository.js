@@ -8,7 +8,6 @@ mysql.createConnection({
     password: 'FWTzJQwYUf',
     database: 'sql7307338'
 }).then(c => {
-    debugger
     connection = c
 }).then(() => {
     connection.connect((err) => {
