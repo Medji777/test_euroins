@@ -1,0 +1,15 @@
+.form_auth {
+    max-width: 340px;
+    display: flex;
+    flex-direction: column;
+    padding: 17px;
+}
+
+.form_login {
+    display: flex;
+    flex-direction: column;
+}
+
+.form_login__btn {
+    width: 100%;
+}
