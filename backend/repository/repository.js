@@ -25,18 +25,19 @@ const getTokens = (token) => {
 };
 
 const getUsersOnId = () => {
-    return connection.query('SELECT * FROM `Users` ORDER BY id ASC');
+    let query = "SELECT * FROM `Users` ORDER BY id ASC";
+    return connection.query(query);
 };
 
 const getUsersOnName = (login) => {
-    return connection.query("SELECT * FROM `Users` WHERE name=?", [login]);
+    let query = "SELECT * FROM `Users` WHERE name=?";
+    return connection.query(query, [login]);
 };
 
 const setToken = (token, userId, expiredAt) => {
     let tokenQuery = "INSERT `Tokens` (Token,UserId,ExpiredAt) VALUES (?, ?, ?)";
     return connection.query(tokenQuery, [token, userId, expiredAt])
 };
-
 
 exports.getTokens = getTokens;
 exports.getUsersOnId = getUsersOnId;
